@@ -17,3 +17,77 @@
  // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
+.header-style {
+    background-color: #dbdee0;
+    color: white;
+    text-align: center;
+}
+
+.post-style {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.h1-style {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.7em;
+}
+
+.welcome-post-image {
+    height: 75%;
+    width: 75%;
+}
+
+.ul-default {
+    list-style-type: none;
+}
+
+.background {
+    background-color: #fbfbfb;
+}
+
+.home-button {
+    text-align: center;
+    margin-left: 20px;
+}
+
+.account-buttons {
+    font-size: 0.8em;
+}
+
+.header-1 {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.0975);
+    top: 0;
+    width: 100%;
+    // z-index: 1;
+}
+
+.logo {
+    border-radius: 50%;
+    height: 56px;
+    // width: 50%;
+}
+
+.header-text {
+    text-align: center;
+}
+
+.post-image-style {
+    width: 75%;
+    max-width: 640px;
+}
+
+.post-col-margin {
+    margin-bottom: 10px;
+}
+
+.comment-style {
+    background: grey;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.8em;
+    color: white;
+}

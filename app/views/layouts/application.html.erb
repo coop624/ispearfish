@@ -7,6 +7,39 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+        <div class ="header-1">
+          <div class="container">
+            <div class="row header-text">
+              <div class="col-sm">
+                <a href="/">
+                  <img src="https://www.jblspearguns.com/wp-content/uploads/2016/07/jbl-spearguns-logo-icon.png" class="logo">
+                </a>
+              </div>
+            </div>
+            <div class="row header-text">
+              <div class="col-sm">
+                <% if user_signed_in? %>
+                  <%= link_to "My posts", "/users/#{current_user.id}/posts" %>
+                <% else %>
+                <% end %>
+              </div>
+              <div class="col-sm">NSW Fish</div>
+                <div class="col-sm account-buttons">
+                    <% if user_signed_in? %>
+                      <%= link_to current_user.email, edit_user_registration_path %><br>
+                      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+                    <% else %>
+                      <%= link_to "Sign Up", new_user_registration_path %><br>
+                      <%= link_to "Login", new_user_session_path %>
+                    <% end %>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+
   </head>
 
   <body>

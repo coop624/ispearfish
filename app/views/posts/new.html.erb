@@ -1,0 +1,28 @@
+<div class="container">
+    <%= form_for [@user,@post] do |f| %>
+        <ul class="ul-default">
+            <li>
+                <label>Title:</label>
+                    <%= f.text_field :title %>
+            </li>
+            <li>
+                <label>Caption:</label>
+                    <%= f.text_field :caption %>
+            </li>
+            <li>
+                <label>Fish species:</label>
+                    <%= f.text_field :fish_type %>
+            </li>
+            <li>
+                <label>Location:</label>
+                    <%= f.text_field :location %>
+            </li>
+            <li>
+        </ul>
+            <div class="form-group">
+                <%= f.label :photo %>
+                <%= f.file_field :photo %>
+            </div>
+            <%= f.submit %>
+    <% end %>
+</div>
