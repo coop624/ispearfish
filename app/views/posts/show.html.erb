@@ -2,34 +2,31 @@
     <h1 class="h1-style"><%= @post.title %></h1>
     <div class='post-style'>
         <div class="row">
-            <div class="col-sm">
-                <img src="<%= @post.photo %>" class='post-image-style'/>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm">
+            <div class="col-sm post-padding">
+                    <img src="<%= @post.photo %>" class='post-image-style'/>
+                <br>
+                    <%= @post.likes.count %> Likes    
+                <br>
+                    <%= render 'likes/index' %>    
+                <br>                    
                     <%= @post.caption %>
                 <br>
                     User: <%= @post.user.email %>
                 <br>
                     Location: <%= @post.location %>
                 <br>
-                    Species: <%= @post.fish_type %>
+                    Species: <%= @post.fish.name %>
             </div>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row comment-style">
-        <div class="col-sm">
-        <%= @post.comments.count %> Comments
-                    <br>
-        <%= render 'comments/index' %>
-                    <br>
-                Add a comment:
-                    <br>
-        <%= render 'comments/form' %>
-                    <br>
+            <div class="col-sm comment-style">
+                    <%= @post.comments.count %> Comments
+                <br>
+                    <%= render 'comments/index' %>
+                <br>
+                    Add a comment:
+                <br>
+                    <%= render 'comments/form' %>
+                <br>
+            </div>
         </div>
     </div>
 </div>

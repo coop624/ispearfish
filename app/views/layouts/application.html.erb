@@ -20,11 +20,13 @@
             <div class="row header-text">
               <div class="col-sm">
                 <% if user_signed_in? %>
-                  <%= link_to "My posts", "/users/#{current_user.id}/posts" %>
+                  <%= link_to "My photos", "/users/#{current_user.id}/posts" %>
                 <% else %>
                 <% end %>
               </div>
-              <div class="col-sm">NSW Fish</div>
+              <div class="col-sm">
+                  <%= link_to "NSW fish", "/fish" %>
+              </div>
                 <div class="col-sm account-buttons">
                     <% if user_signed_in? %>
                       <%= link_to current_user.email, edit_user_registration_path %><br>
@@ -37,8 +39,10 @@
                 </div>
               </div>
             </div>
+            <hr class="hr-style">
           </div>
-        </div>  
+        </div>
+            
 
   </head>
 

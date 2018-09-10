@@ -1,11 +1,16 @@
 class PostsController < ApplicationController
     def index
+        @user = User.find(params[:user_id])
         @posts = Post.where(user_id: params[:user_id])
     end
     def show
         @post = Post.find(params[:id])
         @user = User.find(params[:user_id])
         @comments = Comment.where(post_id: params[:id])
+        @comment = Comment.new
+        @likes = Like.where(post_id: params[:id])
+        @like = Like.new
+        @likerule = Like.where(user_id: current_user.id, post_id: params[:id]).count
     end
     def new
         @user = User.find(params[:user_id])
@@ -19,6 +24,6 @@ class PostsController < ApplicationController
     end
     private
     def post_params
-        params.require(:post).permit(:title,:photo,:caption,:location,:fish_type,:user_id)
+        params.require(:post).permit(:title,:photo,:caption,:location,:fish_id,:user_id)
     end
 end

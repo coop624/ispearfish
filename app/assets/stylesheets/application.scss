@@ -32,7 +32,7 @@
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-size: 1.7em;
+    font-size: 1.3em;
 }
 
 .welcome-post-image {
@@ -85,9 +85,52 @@
 }
 
 .comment-style {
-    background: grey;
-    margin-top: 15px;
+    background: #cdd5da;
     text-align: center;
     font-size: 0.8em;
-    color: white;
+    color: black;
+}
+
+input {
+    width: 75%;
+    min-width: 100px;
+}
+
+input[type=text] {
+    width: 75%;
+    height: 50px;
+    margin-bottom: 10px;
+    min-width: 100px;
+}
+
+.post-padding {
+    margin-bottom: 10px;
+}
+
+.hr-style{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    border-color: #cdd5da;
+}  
+
+.comment-email-style{
+    font-weight: bold;
+}
+
+.center-link{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.fish-image-show{
+    max-height: 250px;
+}
+
+.margin-bottom {
+    margin-bottom: 15px;
 }

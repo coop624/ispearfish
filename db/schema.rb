@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_04_162503) do
+ActiveRecord::Schema.define(version: 2018_09_06_201435) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -20,10 +20,11 @@ ActiveRecord::Schema.define(version: 2018_09_04_162503) do
 
   create_table "fish", force: :cascade do |t|
     t.string "name"
-    t.string "photo"
-    t.string "description"
-    t.string "restrictions"
-    t.string "bag_limit"
+    t.string "image"
+    t.string "characteristics"
+    t.string "size"
+    t.string "distribution"
+    t.string "waters"
   end
 
   create_table "likes", force: :cascade do |t|
@@ -47,7 +48,7 @@ ActiveRecord::Schema.define(version: 2018_09_04_162503) do
     t.string "title"
     t.string "photo"
     t.string "caption"
-    t.string "fish_type"
+    t.integer "fish_id"
     t.string "location"
     t.integer "timestamp"
   end

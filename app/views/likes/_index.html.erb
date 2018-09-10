@@ -1,0 +1,7 @@
+<%= form_for([@user,@post,@like]) do |f| %>
+    <% if @likerule == 0  %>
+        <%= f.submit "Like" %>
+    <% else %>
+        You've liked this post!
+    <% end %>
+<% end %>

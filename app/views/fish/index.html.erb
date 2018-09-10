@@ -1,0 +1,43 @@
+<div class="container background">
+    <h1 class="h1-style">NSW Fish</h1>
+    <div class="post-style">
+        <% @fishes.each_slice(3) do |group| %>
+            <div class="row">
+                <% if group.count == 3 %>
+                    <% group.each do |post| %>
+                            <div class="col-sm post-col-margin">
+                                    <a href="/fish/<%= post.id %>">
+                                        <img class="welcome-post-image" src="<%= post.image %>" />
+                                    </a>
+                                <br>
+                                    <%= post.name %>
+                            </div>
+                    <% end %>
+                <% elsif group.count == 2 %>
+                    <% group.each do |post| %>
+                            <div class="col-sm post-col-margin">
+                                    <a href="/fish/<%= post.id %>">
+                                        <img class="welcome-post-image" src="<%= post.image %>" />
+                                    </a>
+                                <br>
+                                    <%= post.name %>
+                            </div>
+                    <% end %>
+                            <div class="col-sm post-col-margin"></div>
+                <% elsif group.count == 1 %>
+                    <% group.each do |post| %>
+                            <div class="col-sm post-col-margin">
+                                    <a href="/fish/<%= post.id %>">
+                                        <img class="welcome-post-image" src="<%= post.image %>" />
+                                    </a>
+                                <br>
+                                    <%= post.name %>
+                            </div>
+                    <% end %>
+                            <div class="col-sm post-col-margin"></div>
+                            <div class="col-sm post-col-margin"></div>
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+</div>

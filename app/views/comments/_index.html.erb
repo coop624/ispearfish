@@ -1,6 +1,9 @@
 <% @comments.each do |comment| %>
-    <%= comment.user.email %>
-<br>
-    <%= comment.text %>
-<br>
+    <div class="comment-email-style">
+            <%= comment.user.email %>
+    </div>
+    <div class="comment-text-style">
+            <%= comment.text %>
+    </div>
+    <br>
 <% end %>

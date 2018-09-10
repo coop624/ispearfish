@@ -1,0 +1,81 @@
+<div class="container background">
+    <h1 class="h1-style"><%= @fish.name %></h1>
+    <div class='post-style'>
+        <div class="row">
+            <div class="col-sm post-padding margin-bottom">
+                    <img src="<%= @fish.image %>" class='post-image-style fish-image-show'/>
+                <br>
+                    Found: <%= @fish.waters %>
+            </div>
+            <div class="col-sm comment-style margin-bottom">
+                <h5>Characteristics</h5>
+                    <%= @fish.characteristics %>
+                        <br><br>
+                <h5>Size</h5>
+                    <%= @fish.size %>
+                        <br><br>
+                <h5>Distribution</h5>
+                    <%= @fish.distribution %> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm margin-bottom">
+            <h5><%= @fish.name %> Photos</h5>
+                <div class="post-style">
+                    <% @posts.each_slice(3) do |group| %>
+                        <div class="row">
+                            <% if group.count == 3 %>
+                                <% group.each do |post| %>
+                                        <div class="col-sm post-col-margin">
+                                                <a href="/users/<%=post.user.id%>/posts/<%=post.id%>">
+                                                    <img class="welcome-post-image" src="<%= post.photo %>" />
+                                                </a>
+                                            <br>
+                                                <%= post.caption %>
+                                            <br>
+                                                Species: <%= post.fish.name %>
+                                            <br>
+                                                Location: <%= post.location %>
+                                        </div>
+                                <% end %>
+                            <% elsif group.count == 2 %>
+                                <% group.each do |post| %>
+                                        <div class="col-sm post-col-margin">
+                                                <a href="/users/<%=post.user.id%>/posts/<%=post.id%>">
+                                                    <img class="welcome-post-image" src="<%= post.photo %>" />
+                                                </a>
+                                            <br>
+                                                <%= post.caption %>
+                                            <br>
+                                                Species: <%= post.fish.name %>
+                                            <br>
+                                                Location: <%= post.location %>
+                                        </div>
+                                <% end %>
+                                        <div class="col-sm post-col-margin"></div>
+                            <% elsif group.count == 1 %>
+                                <% group.each do |post| %>
+                                        <div class="col-sm post-col-margin">
+                                                <a href="/users/<%=post.user.id%>/posts/<%=post.id%>">
+                                                    <img class="welcome-post-image" src="<%= post.photo %>" />
+                                                </a>
+                                            <br>
+                                                <%= post.caption %>
+                                            <br>
+                                                Species: <%= post.fish.name %>
+                                            <br>
+                                                Location: <%= post.location %>
+                                        </div>
+                                <% end %>
+                                        <div class="col-sm post-col-margin"></div>
+                                        <div class="col-sm post-col-margin"></div>
+                            <% end %>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
